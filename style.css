@@ -32,19 +32,182 @@ box-sizing: border-box;
 }
 
 body {
-    background-image: url(/asset/images/background-desktop.png);
-    color:  hsl(0, 0%, 100%);
-    font-family:"CustomFont", sans-serif;
-    height: 100vh;
-    text-align: center;
+   background-image: 
+   url(/asset/images/pattern-circle.svg),
+   url(/asset/images/pattern-squiggly-line-bottom-desktop.svg),
+   url(/asset/images/pattern-squiggly-line-top.svg),
+   url(/asset/images/pattern-circle.svg),
+   url(/asset/images/pattern-lines.svg),
+   url(/asset/images/background-desktop.png); 
+   background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+   background-position: 
+   1200px 445px,
+   0 430px,
+   100% 50px,
+   -80px -50px,
+   center,
+   center;
+   background-size: auto,55%,28%,auto,cover,cover;
+    color: hsl(0, 0%, 100%);
+    font-family: "CustomFont", sans-serif;
+    height: 100vh; 
+    
 }
+
+
 
 .header {
     text-align: center;
-    font-size: 10px;
-    margin-top: 25px;
+    min-width: 500px;
+    margin: 20px  0  25px;
 }
 .header img {
-    width: 120px;
+    width: 170px;
+}
+.main-intro {
+    text-align: center;
 }
 
+.main-intro h1 {
+    font-size: 60px;
+}
+
+.main-intro p {
+    color:  hsl(252, 6%, 83%);
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+/* Form */
+.form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 550px; 
+}
+.upload-content {
+    color:  hsl(252, 6%, 83%);
+    width: 100%;
+    margin-bottom: 20px; 
+    text-align: left;
+}
+.upload-content h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: hsl(252, 6%, 83%);
+}
+.upload-box {
+    position: relative;
+    width: 100%;
+    /* text-align: center; */
+    border: 2px dashed hsl(245, 19%, 35%);
+    background-color:hsl(245, 50%, 13%);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+
+  }
+  
+  .upload-box:hover {
+    background-color: hsl(245, 19%, 35%);
+  }
+  
+  .upload-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    cursor: pointer;
+  }
+  
+  .upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsl(252, 6%, 83%);
+  }
+  .upload-icon {
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 70px; 
+    background-color: hsl(245, 19%, 35%);
+    border-radius: 5px;
+}
+  
+  .upload-placeholder p {
+    font-size: 15px;
+    color: hsl(252, 6%, 83%);
+  }
+  
+.upload-info {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 15px;
+ margin-top: 10px;
+}
+
+.form-group {
+    width: 100%; /* Form fields span the full width */
+    margin-bottom: 20px; /* Add spacing between form fields */
+    text-align: left; /* Align labels and inputs to the left */
+}
+  .form label {
+    display: block;
+    font-size: 20px;
+    color: hsl(252, 6%, 83%);
+    margin-bottom: 15px;
+
+  } 
+  .form-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    background-color:hsl(245, 50%, 13%);
+    border:2px solid hsl(245, 19%, 35%);
+    color:hsl(252, 6%, 83%);
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border: 2px solid hsl(245, 15%, 58%);
+    box-shadow: 0 0 3px 0 hsl(245, 15%, 58%);
+
+  }
+  .form-input:hover {
+    background-color: hsl(245, 19%, 35%);
+  }
+  .form-group input::placeholder {
+    color: hsl(245, 15%, 58%);
+    font-size: 16px; 
+    opacity: 0.8; 
+}
+
+.generate-btn {
+    background-color: hsl(7, 88%, 67%);
+    border-color: transparent;
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.generate-btn:hover {
+    background-color:  hsl(7, 71%, 60%);
+}
