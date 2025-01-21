@@ -17,7 +17,7 @@
   <header class="header">
     <img src="/asset/images/logo-full.svg" alt="Logo image">
   </header>
-  <div>
+  <div class="main-container">
     <div class="main-intro">
       <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
       <p> Secure your spot at next year's biggest coding conference.
@@ -40,6 +40,11 @@
           <img src="/asset/images/icon-info.svg" alt="info-icon">
           <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
+        <div class="error-message hidden" id="upload-error">
+          <img src="/asset/images/icon-info.svg" alt="
+          info-icon">
+          <p> File too large. please upload your photo under 500KB.</p>
+        </div>
       </div>
 
       <div class="form-group">
@@ -51,9 +56,9 @@
         <label for="email">Email Address</label>
         <input type="email" class="form-input" id="email" placeholder="sonibaretimi@gmail.com" required>
 
-        <div class="upload-info" style="display: none;">
+        <div class="error-message hidden" id="email-error">
           <img src="/asset/images/icon-info.svg" alt="info-icon">
-          <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+          <p> Please enter a valid email address.</p>
         </div>
       </div>
 
@@ -66,7 +71,7 @@
     </form>
   </div>
 
-
+ 
 
   <!-- Generated tickets starts
 
